@@ -5,13 +5,13 @@ let menuCloseBtn = document.getElementById('close-button');
 // 메뉴버튼 클릭
 menuBar.addEventListener('click', function () {    
     // menu[0].style.display = 'block';
-    menu[0].style.top = '0';
+    menu[0].style.right = '0';
     menuBar.style.display = 'none';
 });
 
 // 메뉴 닫기 버튼 클릭
 menuCloseBtn.addEventListener('click', function () {
-    menu[0].style.top = '-100%';
+    menu[0].style.right = '-100%';
     menuBar.style.display = 'block';
 });
 

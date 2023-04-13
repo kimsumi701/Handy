@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* PC 사이즈 */
+/* 페이지 레이아웃 */
+body {
+    display: flex;       
+}
+/* 헤더 */
+#header {    
+    height: 300px;
+    /* background-color: antiquewhite; */
+}
+.header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.header a {
+    display: inline-block;
+    width: 320px;
+    height: 270px;
+}
+.header-logo {
+    width: 100%;
+    height: 100%;   
+    font-size: 0px;     
+    background-image: url(/img/Logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* 메뉴  */
+.menu {
+    width: 300px;          
+    background-color: #eee;    
+}
+#close-button {
+    display: none;
+}
+.user-nav {
+    width: 100%;
+}
+/* 프로필 */
+.user-profile {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 40px;   
+}
+/* 프로필 이미지 */
+.profile-img {
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    margin-right: 13px;    
+    border-radius: 100%;
+    text-align: center;
+    line-height: 60px;
+    background-color: #aaa;
+}
+/* 프로필 닉네임 */
+.profile-nickname p {
+    font-size: 20px;
+    line-height: 70px;
+}
+/* 유저 메뉴 */
+.user-tool {
+    width: 100%;
+    margin: 10px 0 0 0;    
+}
+.user-tool ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+/* 메뉴 구분선 */
+.line1 {
+    margin-top: 50px;
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px;
+    border-color: #aaa;
+}
+/* 프로그램 메뉴 */
+.program-nav {    
+    margin-top: 17px;
+    margin-left: 10px;
+}
+.all-button {
+    font-size: 20px;
+}
+.collapse-list {
+    margin-left: 20px;
+}
+.program-list {
+    font-size: 18px;
+}
+.program-sub a {    
+    font-size: 17px;
+}
+/* 전체보기 버튼 토글 */
+.btn-toggle {
+    margin-right: 0;
+}
+.btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;    
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+}
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+  }
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+/* 프로그램 버튼 토글 */
+.program-collapse-button {
+    width: 16px;
+}
+/* 프로그램 하위 항목 */
+.program-sub {   
+    margin-left: 30px; 
+}
+.program-sub li {
+    margin-bottom: 5px;
+}
+/* 메인 */
+.wrap {
+    width: 100%;   
+    height: 100%;
+}
+/* 단축키 검색 */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.search-input-border {  
+    display: flex;  
+    justify-content: space-around;
+    width: 810px;
+    height: 47px;
+    margin-right: 5px;
+    padding: 5px;
+    border: 2px solid #252525;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.search-input-border input {
+    width: 90%;
+    height: 100%;
+    border: none;
+}
+.search-input-border input:focus {
+    outline: none;
+}
+/* 검색 버튼 */
+#serach-button { 
+    width: 32px;
+    height: 32px;    
+    text-indent: -999999px;
+    border: none;
+    background-color: transparent;
+    background-image: url(/img/ico-search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* 단축키 영역 */
+.shortcut {    
+    position: relative;
+    width: 80%;        
+    margin: 0 auto;    
+    padding-bottom: 60px;
+    border-radius: 10px;
+    background-color: #eee;
+}
+.program-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name-box {
+    display: flex;
+    font-size: 20px;
+}
+.name-box p{    
+    margin-top: 10px;
+    text-indent: 20px;
+}
+#Favorite-button {
+    width: 35px;
+    height: 35px;    
+    margin-top: 8px;    
+    border: none;
+    color: #fb0e0e;
+    cursor: pointer;
+}  
+.favorite-btn-toggle {
+    color: #ffffff;
+}
+
+#edit-button {
+    width: 70px;
+    height: 38px;
+    margin: 7px 10px 0 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.edit-box-02 {
+    display: none;
+    margin: 13px 10px 0 0;
+}
+.edit-box-02 button {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    border: none;
+    font-size: 26px;    
+    line-height: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.edit-box-03 {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    display: none;
+}
+#save-button {
+    width: 70px;
+    height: 38px;
+    margin: 7px 10px 0 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+/* 단축키 추가 */
+.shortcut-list {  
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;    
+    border-radius: 50px;
+    background-color: #aaa;
+}
+.key-box {
+    width: 450px;
+    height: 100%;
+    margin-left: 10px;
+    padding: 3px;
+}
+.add-key-list input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+.add-key-list input:focus {
+    outline: none;
+}
+.add-key-explanation input {
+    text-indent: 10px;
+}
+#add-shortcut-button {    
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    border: none;
+    font-size: 26px;    
+    line-height: 5px;
+    background-color: transparent;
+}
+/* 단축키 항목간 간격 */
+.line2 {
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+}
+/* 단축키 리스트 */
+.key-list {
+    display: flex;  
+    height: 100%;  
+    line-height: 40px;
+    margin-left: 10px;    
+}
+.key-list li {
+    margin: 0 10px 0 0;
+}
+.key-list input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    color: #252525;
+}
+.key-list input:focus {
+    outline: none;
+}
+.key {
+    width: 75px;
+    border-radius: 10px;
+    text-align: center;    
+    background-color: #ffffff;
+}
+/* 단축키 설명 */
+.key-explanation {
+    width: 270px;
+    height: 100%;
+    padding: 3px 0 3px 0;    
+}
+.key-explanation input {
+    width: 235px;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    text-indent: 10px;
+    background-color: #ffffff;
+}
+.key-explanation input:focus {
+    outline: none;
+}
+/* 예시 버튼 */
+#example-button {
+    border: none;
+    line-height: 5px;
+    background-color: transparent;
+}
+/* 삭제 버튼 */
+#delete-button {
+    display: none;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    border: none;
+    font-size: 28px;
+    background-color: transparent;
+}
+/* footer */
+#footer {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;  
+    margin-top: 80px;  
+    border-top: 1px solid #252525;
+    
+}
+#footer div {    
+    text-align: center;
+}
+/* 페이지 상단가기 버튼 */
+#page-top-button {
+    overflow: hidden;
+    position: fixed;  
+    right: 290px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #eee;
+}
+#page-up-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 23px;
+    line-height: 50px;
+}
+
+/* 테블릿 사이즈 */
+@media (max-width: 1259px) {   
+    /* 검색창 */
+    .search-input-border {
+        width: 550px;
+    }       
+    .add-key-list {
+        width: 250px;        
+    }
+    .key-explanation input {
+        font-size: 13px;
+        text-indent: 2px;
+    }    
+    #add-shortcut-button {  
+        margin-left: -4px;      
+        font-size: 25px;
+    }
+    /* 단축키 리스트 */        
+    .key-box {        
+        width: 140px;        
+    }           
+    .key-list {  
+        width: 250px;         
+        line-height: 40px;
+        margin-left: 0;    
+    }    
+    /* 단축키 설명 */
+    .key-explanation {
+        width: 240px;
+        height: 100%;
+        margin-left: 110px;
+        padding: 3px;
+    }
+    .key-explanation input {
+        width: 90%;               
+    }
+    /* 단축키 삭제 버튼 */
+    #delete-button {
+        width: 20px;
+        height: 20px;        
+        font-size: 26px;   
+        line-height: 10px;     
+    }
+    /* 메뉴 */
+    body {        
+        position: relative;
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+    }
+    #menu-bar {        
+        position: absolute;
+        top: 30px;
+        right: 30px;        
+        width: 30px;
+        height: 30px;        
+        background-image: url(/img/ico-hamburgermenu.png);        
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        cursor: pointer;
+    }
+    #close-button {
+        display: block;
+        margin: 10px 0 0 10px;
+    }       
+    .menu {    
+        /* display: none;                     */
+        position: absolute;
+        /* top: -100%;   */
+        right: -100%;        
+        width: 100%;      
+        height: 100vh;        
+        transition: 0.7s;
+        
+    }  
+    /* 페이지 상단가기 버튼 */
+    #page-top-button {        
+        right: 30px;
+        bottom: 60px;
+        width: 50px;
+        height: 50px;        
+    }
+}
+/* 모바일 사이즈 */
+@media (max-width: 768px) {  
+    /* 검색창 */
+    .search-input-border {
+        width: 300px;
+    }   
+    /* 단축키 리스트 */
+    .shortcut p {
+        font-size: 18px;
+    }
+    #Favorite-button {
+        font-size: 18px;
+        margin-top: 6px;        
+    }        
+    .shortcut-list {
+        position: relative;
+        justify-content: center;
+        flex-direction: column;        
+        height: 70px;                
+        padding: 2px;
+        border-radius: 15px;
+    }
+    .key-box {
+        width: 100%;
+        height: 50%;        
+    }
+    .key-list {
+        width: 100%;
+    }
+    .key-list li {        
+        line-height: 27px;
+    }
+    .key-explanation {            
+        width: 100%;
+        height: 50%;
+        margin-right: 100px;
+    }
+    .key-explanation input{          
+        width: 80%;
+    }   
+    #delete-button {
+       position: absolute;
+       bottom: 8px;
+       right: 2px;
+    }
+    /* 메뉴 */
+    .menu {
+        width: 100%;
+        
+    }
+    /* footer */
+    #footer div{        
+        padding: 0 28px 0 28px;
+    }
+}

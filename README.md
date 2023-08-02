@@ -3,6 +3,7 @@
 <br>
 <h3>관련 문서</h3> 
 <b>설계를 위한 문서로 현재 코드와 다른 부분이 있을 수 있습니다.</b>
+<br>
 <ul>
   <li><a href="https://docs.google.com/document/d/1lObNwOQJFIoAvun0VeDSV3AFBCkhJn3wPHfWtibfWv0" target="_blank">요구사항 정의서</a></li>
   <li><a href="https://docs.google.com/document/d/1Ec4TpzuWuX2LE3gHJwuBL77HZLMPkzPHoDEQaseUb-w" target="_blank">화면설계서</a></li>

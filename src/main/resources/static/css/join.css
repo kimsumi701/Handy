@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* PC 사이즈 */
+#wrap {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dadede;
+}
+
+/* 회원가입 페이지 */
+.join {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* 로고 */
+.logo-box {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 80px;
+}
+.header a {
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    background-image: url(/img/logo_s.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 회원가입 h1 */
+.join h1 {
+    height: 150px;
+    color: #252525;
+    line-height: 150px;
+    text-align: center;
+}
+
+/* 회원가입 form */
+.join form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 회원 정보 입력 영역 */
+.input-area {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 30px;
+    margin: 0 auto 20px auto;
+}
+
+/* 회원 정보 label */
+.input-area label {
+    width: 120px;
+    height: 30px;
+    margin-right: 5%;
+    font-size: 1rem;
+}
+
+/* 회원 정보 입력 창 */
+.input-area input {
+    width: 230px;
+    height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 14px;
+    text-indent: 5px;
+}
+.input-area input:focus {
+    outline: none;
+}
+
+/* 이메일 인증 영역 */
+#email-area {
+    position: relative;
+}
+
+/* 이메일 인증 에러메세지 */
+#error-message {
+    display: none;
+    color: red;
+    font-size: 13px;
+}
+
+/* 이메일 코드 보내기 버튼 */
+#send-code-btn,
+#match-code-btn {
+    border: 1px solid #252525;
+    border-radius: 5px;
+    background-color: #f6f8fa;
+}
+#send-code-btn {
+    position: absolute;
+    top: 0;
+    right: -71px;
+    width: 80px;
+    height: 30px;
+}
+
+/* 인증 코드 영역 */
+#code-input-area {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    text-indent: 5px;
+}
+
+/* 코드 인증 확인 */
+#match-code-btn {
+    display: block;
+    width: 50px;
+    margin-left: 3px;
+}
+
+/* 가입 버튼 */
+#join-button {
+    display: block;
+    width: 30%;
+    height: 50px;
+    margin: 80px auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #252525;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* 테블릿 사이즈 */
+@media (max-width: 1259px) {
+    /* 입력 input */
+    .input-area input {
+        width: 90%;
+    }
+
+    /* 이메일 보내기 버튼 */
+    #send-code-btn {
+        right: -82px;
+    }
+}
+
+/* 모바일 사이즈 */
+@media (max-width: 768px) {
+    /* 배경 */
+    .join {
+        width: 100%;
+        padding: 0 60px 0 35px;
+    }
+
+    /* 입력 영역 */
+    .input-area {
+        width: 100%;
+    }
+
+    /* 입력 label */
+    .input-area label {
+        margin: 0;
+        width: 40%;
+        margin-right: 15px;
+    }
+}

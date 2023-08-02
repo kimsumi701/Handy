@@ -1,0 +1,118 @@
+#wrap {
+    height: 100%;
+    min-height: 100%;
+}
+/* header */
+#header {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    margin-bottom: 200px;
+    border-bottom: 1px solid #252525;
+}
+.header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.header a {
+    display: inline-block;
+    width: 320px;
+    height: 270px;
+}
+.header-logo {
+    width: 100%;
+    height: 100%;
+    font-size: 0px;
+    background-image: url(/img/Logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* main */
+.container {
+    min-height: 50%;
+}
+
+.find-account-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* form */
+.find-form,
+.find-form input ,
+.find-form button {
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+.find-form {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+    background-color: #f6f8fa;
+    text-align: center;
+}
+
+/* title */
+#title {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* form input */
+.find-form input {
+    width: 280px;
+    height: 40px;
+    margin-top: 70px;
+    text-indent: 5px;
+}
+.find-form input:focus {
+    outline: none;
+}
+
+/* form button */
+.find-form button {
+    width: 150px;
+    height: 36px;
+    margin-top: 60px;
+    background-color: #ffffff;
+}
+
+/* 오류 메세지 */
+#error-message {
+    position: absolute;
+    top: 115px;
+    left: 35px;
+    color: red;
+    font-size: 13px;
+}
+
+/* 새 비밀번호 설정 */
+.new-password-form {
+    padding-top: 55px;
+}
+
+.new-password input {
+    margin: 0 0 15px 0;
+}
+
+#new-password-btn {
+    margin-top: 15px;
+}
+
+/* 아이디 찾기 결과 */
+.return-value {
+    margin: 0;
+    line-height: 180px;
+    font-weight: 500;
+}
+
+#go-to-login {
+    margin: 0;
+}
+

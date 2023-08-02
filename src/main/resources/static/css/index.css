@@ -1,0 +1,144 @@
+/* PC */
+/* header */
+#header {
+    height: 300px;
+    margin-bottom: 100px;
+}
+.header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* user-tool */
+.user-tool {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    text-align: end;
+}
+.user-tool a {
+    font-size: 17px;
+    line-height: 80px;
+    padding-right: 100px;
+}
+/* logo */
+.logo-box {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.logo-box a {
+    display: inline-block;
+    width: 320px;
+    height: 270px;
+}
+.header-logo {
+    width: 100%;
+    height: 100%;
+    font-size: 0px;
+    background-image: url(/img/Logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* 웹 설명 */
+#main {
+    height: 1010px;
+}
+.web-explanation {
+    width: 500px;
+    padding: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.example {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.web-example {
+    width: 100%;
+}
+.example-01 {
+    width: 100%;
+    margin-top: 50px;
+    text-align: right;
+}
+.example-02 {
+    width: 100%;
+    margin-top: 50px;
+    text-align: left;
+}
+.example-03 {
+    width: 100%;
+    margin-top: 50px;
+    text-align: right;
+}
+/* footer */
+body {
+    position: relative;
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+    border-top: 1px solid #252525;
+}
+#footer div {
+    text-align: center;
+}
+
+/* 테블릿 */
+@media (max-width: 1259px) {
+    #main {
+        height: 900px;
+    }
+    .user-tool a {
+        padding-right: 40px;
+    }
+    .example-01 img {
+        width: 550px;
+    }
+    .example-02 img {
+       width:  600px;
+    }
+    .example-03 img {
+        width: 600px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    #main {
+        height: 800px;
+    }
+    .web-explanation {
+        width: 100%;
+        font-size: 14px;
+    }
+    .example-01 {
+        height: 50px;
+    }
+    .example-01 img {
+        width: 100%;
+        height: 100%;
+    }
+    .example-02 {
+        height: 150px;
+        margin-top: 100px;
+    }
+    .example-02 img {
+       width: 100%;
+       height: 100%;
+    }
+    .example-03 {
+        margin-top: 100px;
+    }
+    .example-03 img {
+        width: 100%;
+        height: 100%;
+    }
+    #footer div{
+        padding: 0 15px 0 15px;
+        font-size: 15px;
+    }
+}

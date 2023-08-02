@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Handy</title>
+        <script src="https://kit.fontawesome.com/8baca4a0ad.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/myPage.css">
+    </head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="logo-box">
+                <a href="/main">
+                    <div class="logo">Handy</div>
+                </a>
+            </div>
+            <div class="user-profile">
+                <!-- 프로필 이미지 -->
+                <div class="profile-img">
+                    <img src="/img/ico-chatting.png" alt="프로필 테스트 이미지">
+                </div>
+                <div class="profile-right">
+                    <!-- 닉네임 -->
+                    <div class="profile-nickname">
+                        <p>{{currentMember.nickName}}</p>
+                    </div>
+                    <a href="/mypage/member">
+                        <button id="profile-edit-btn">수정하기</button>
+                    </a>
+                </div>
+            </div>
+            <div class="user-tool">
+                <a href="/logout">로그아웃</a>
+            </div>
+        </header>
+        <!-- main -->
+        <main class="container">
+            <div class="main-top">
+                <p id="main-tag">최근 활동</p>
+                <a href="/mypage/program">
+                    <button id="program-edit-btn">프로그램 편집</button>
+                </a>
+            </div>
+            <!-- 최근 활동 -->
+            <div class="last-Edit-group">
+                {{#programDtoList}}
+                    <a href="/main/shortcut/{{id}}">
+                        <div class="group-box">
+                            <div class="group-info">
+                                    <p class="program-name">{{name}}</p>
+                                <span class="group-name">{{shortCutGroupDto.name}}</span>
+                            </div>
+                            <button class="fa-solid fa-heart" id="favorite-btn" style="color: #fb0e0e;"></button>
+                            <span id="modified-date">최근 수정일 : {{shortCutGroupDto.modifiedDate}}</span>
+                        </div>
+                    </a>
+                {{/programDtoList}}
+                {{#blank}}
+                    <div class="group-box blank">
+                        최근 활동내역이 없습니다.
+                    </div>
+                {{/blank}}
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="footer">
+            <div>
+                <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다. </p>
+                <p>홈페이지 일부 내용과 기타 이미지 등은 출처가 따로 있음을 밝힙니다.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

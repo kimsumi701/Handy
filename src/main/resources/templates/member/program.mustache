@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그램 편집</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/program.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="logo-box">
+            <a href="/main">
+                <div class="logo">Handy</div>
+            </a>
+        </div>
+        <div class="user-profile">
+            <!-- 프로필 이미지 -->
+            <div class="profile-img">
+                <img src="/img/ico-chatting.png" alt="프로필 테스트 이미지">
+            </div>
+            <!-- 닉네임 -->
+            <div class="profile-nickname">
+                <p>{{currentMember.nickName}}</p>
+            </div>
+        </div>
+        <div class="user-tool">
+            <a href="/logout">로그아웃</a>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="container">
+        <!-- 등록된 프로그램 목록 -->
+        <div class="program-box">
+            <p>프로그램 목록</p>
+            <ul class="list-group" id="list-group">
+                {{#programList}}
+                <li class="list-group-item list-group-item-action" aria-current="true">
+                    <input type="hidden" id="program-id" value="{{id}}">
+                    {{name}}
+                </li>
+                {{/programList}}
+                {{^programList}}
+                <div class="blank-list list-group-item list-group-item-action">
+                    프로그램을 추가해주세요.
+                </div>
+                {{/programList}}
+            </ul>
+        </div>
+        <!-- 프로그램 추가 및 수정/삭제 영역 -->
+        <div class="input-edit-box">
+            <div class="input-box">
+                <form action="/mypage/program/create" method="post">
+                    <input type="text" name="name" id="add-program-input" placeholder="프로그램명을 입력해주세요">
+                    <button id="add-program-btn" type="submit" onClick="return returnCreate()">추가</button>
+                </form>
+            </div>
+            <div class="show-info-box" id="info-box">
+                <p id="program-name">프로그램명</p>
+                <button id="edit-btn">수정하기</button>
+            </div>
+            <div class="show-info-box" id="edit-box">
+                <form action="/mypage/program/update" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="Id" class="program-id">
+                    <input type="text" name="name" id="edit-name" placeholder="프로그램명">
+                    <button id="save-btn" type="submit" onClick="return returnPatch()">저장하기</button>
+                </form>
+            </div>
+            <div class="show-info-box" id="delete-box">
+                <form action="/mypage/program/delete" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="Id" class="program-id">
+                    <button id="delete-btn" type="submit" onClick="return returnDelete()">삭제하기</button>
+                </form>
+                {{#ErrorMessage}}
+                <p>{{ErrorMessage}}</p>
+                {{/ErrorMessage}}
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <div>
+            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다. </p>
+            <p>홈페이지 일부 내용과 기타 이미지 등은 출처가 따로 있음을 밝힙니다.</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="/js/program.js"></script>
+</html>

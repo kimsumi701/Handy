@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Handy</title>
+        <script src="https://kit.fontawesome.com/8baca4a0ad.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="header">
+                <a href="/main">
+                    <div class="header-logo">Handy</div>
+                </a>
+            </div>
+        </header>
+        <main class="container" id="main">
+            <form action="/main/serach" method="get">
+                <div class="search-box">
+                    <div class="search-input-border">
+                        <input type="text" id="serach-text" placeholder="검색할 그룹명을 입력해주세요.">
+                        <button id="serach-button">검색</button>
+                    </div>
+                </div>
+            </form>
+            <input type="hidden" id="program-id-top" value="{{Id}}">
+            <!-- 단축키 그룹 -->
+            {{#shortCutGroupDtoList}}
+            <div class="line2"></div>
+            <div class="program-shortcut-section shortcut">
+                <div class="program-info">
+                    <div class="name-box">
+                        <p id="group-tag">{{name}}</p>
+                        <input type="text" placeholder="그룹명" id="group-name">
+                        <input type="hidden" id="program-id" value="{{programId}}">
+                        <input type="hidden" id="group-id" value="{{id}}">
+                        {{#isFavorite}}
+                            <button class="fa-solid fa-heart favorite-btn-toggle" id="Favorite-button" style="color: #fb0e0e;"></button>
+                        {{/isFavorite}}
+                        {{^isFavorite}}
+                            <button class="fa-solid fa-heart" id="Favorite-button" style="color: #ffffff;"></button>
+                        {{/isFavorite}}
+                    </div>
+                    <div class="edit-box-01">
+                        <button id="edit-button">편집</button>
+                        <div class="edit-box-02">
+                            <button class="fa-solid fa-plus" id="plus-shortcut-button"  style="color: #252525;"></button>
+                            <button class="fa-solid fa-minus" id="minus-shortcut-button"  style="color: #252525;"></button>
+                        </div>
+                    </div>
+                    <div class="edit-box-03">
+                        <button id="save-button">확인</button>
+                    </div>
+                </div>
+                <!--       단축키         -->
+                <div class="shortcut-box">
+                {{#shortCutDtoList}}
+                    <div class="shortcut-list">
+                        <div class="key-box">
+                            <ul class="key-list">
+                                <input type="hidden" id="shortcut-id" value="{{id}}">
+                                <li class="key">
+                                    {{#key1}}
+                                        <input type="text" id="key1" value="{{key1}}" disabled>
+                                    {{/key1}}
+                                    {{^key1}}
+                                        <input type="text" id="key1" placeholder="Key1" disabled>
+                                    {{/key1}}
+                                </li>
+                                <li>+</li>
+                                <li class="key">
+                                    {{#key2}}
+                                        <input type="text" id="key2" value="{{key2}}" disabled>
+                                    {{/key2}}
+                                    {{^key2}}
+                                        <input type="text" id="key2" placeholder="Key2" disabled>
+                                    {{/key2}}
+                                </li>
+                                <li>+</li>
+                                <li class="key">
+                                    {{#key3}}
+                                        <input type="text" id="key3" value="{{key3}}" disabled>
+                                    {{/key3}}
+                                    {{^key3}}
+                                        <input type="text" id="key3" placeholder="Key3" disabled>
+                                    {{/key3}}
+                                </li>
+                                <li>+</li>
+                                <li class="key">
+                                    {{#key4}}
+                                        <input type="text" id="key4" value="{{key4}}" disabled>
+                                    {{/key4}}
+                                    {{^key4}}
+                                        <input type="text" id="key4" placeholder="Key4" disabled>
+                                    {{/key4}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="key-explanation">
+                            {{#explain}}
+                                <input type="text" id="explain" value="{{explain}}" disabled>
+                            {{/explain}}
+                            {{^explain}}
+                                <input type="text" id="explain" value="" disabled>
+                            {{/explain}}
+                        </div>
+                        <button class="fa-solid fa-xmark" id="delete-button" style="color: #252525;"></button>
+                    </div>
+                {{/shortCutDtoList}}
+                </div>
+                <button id="group-delete-button">삭제하기</button>
+            </div>
+            {{/shortCutGroupDtoList}}
+            <!--            추가하기-->
+            <div class="new-shortcut-section shortcut">
+                <button id="new-group-button">추 가 하 기</button>
+            </div>
+            <!-- 페이지 상단 이동 -->
+            <div id="page-top-button">
+                <button class="fa-solid fa-arrow-up" id="page-up-button" style="color: #252525;"></button>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="footer">
+            <div>
+                <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다. </p>
+                <p>홈페이지 일부 내용과 기타 이미지 등은 출처가 따로 있음을 밝힙니다.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- 메뉴 -->
+    <div id="menu-bar"></div>
+    <aside class="menu">
+        <!-- 유저 메뉴 -->
+        <div class="user-nav">
+            <button class="close-button btn-close" id="close-button"></button>
+            <!-- 유저 프로필 -->
+            <div class="user-profile">
+                <!-- 프로필 이미지 -->
+                {{#member}}
+                    <div class="profile-img">
+                        <img src="/img/ico-chatting.png" alt="프로필 테스트 이미지">
+                    </div>
+                    <!-- 닉네임 -->
+                    <div class="profile-nickname">
+                        <p>{{nickName}}</p>
+                    </div>
+                {{/member}}
+            </div>
+            <!-- 유저 도구 -->
+            <div class="user-tool">
+                <ul>
+                    <li><a href="/mypage">마이페이지</a></li>
+                    <li><a href="/logout">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 메뉴 구분선 -->
+        <div class="line1"></div>
+        <!-- 프로그램 메뉴 -->
+        <div class="program-nav">
+            <!-- 목록 토글 -->
+            <button class="all-button btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#all-collapse">
+                전체보기
+            </button>
+            {{#programDtoList}}
+                <div class="collapse" id="all-collapse">
+                    <ul class="collapse-list">
+                        <!-- 프로그램 항목 -->
+                        <li class="program-01">
+                            <div class="program-list">
+                                <a href="/main/shortcut/{{id}}">{{name}}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            {{/programDtoList}}
+        </div>
+    </aside>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
+</html>

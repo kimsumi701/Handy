@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로그인</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/login.css" />
+    </head>
+<body>
+    <div id="wrap">
+        <div class="login">
+            <!-- 페이지 로고 -->
+            <h1><a href="/" class="login-logo">Handy</a></h1>
+            <!-- 로그인 영역 -->
+            <div class="login-box">
+                <form action="/login/auth" method="post">
+                    <div class="login-info">
+                        <input type="text" placeholder="아이디" name="userId"/>
+                        <input type="password" placeholder="비밀번호" name="password"/>
+                        {{#error}}
+                            <p>{{exception}}</p>
+                        {{/error}}
+                    </div>
+                    <button type="submit" id="login-button">로그인</button>
+                </form>
+            </div>
+            <!-- 찾기 및 회원가입 링크 -->
+            <div class="link-box">
+                <ul>
+                    <li><a href="/login/findId">아이디 찾기</a></li>
+                    <li><a href="/login/findPwd">비밀번호 찾기</a></li>
+                    <li><a href="/join">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

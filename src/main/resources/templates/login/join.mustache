@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/join.css" />
+</head>
+<body>
+    <div id="wrap">
+        <!-- 회원가입 페이지 -->
+        <div class="join">
+            <!--    로고    -->
+            <div class="logo-box">
+                <a href="/">
+                    <div class="logo">Handy</div>
+                </a>
+            </div>
+            <!-- 회원가입 로고 -->
+            <h1>회원가입</h1>
+            <!-- 회원 정보 입력 영역 -->
+            <div class="join-box">
+                <!-- 회원정보 입력 form -->
+                <form action="/join/create" method="post">
+                    <!-- 아이디 입력창 -->
+                    <div class="input-area">
+                        <label for="userId">아이디</label>
+                        <input id="userId" type="text" name="userId" />
+                    </div>
+                    <!-- 비밀번호 입력창 -->
+                    <div class="input-area">
+                        <label for="pwd">비밀번호</label>
+                        <input id="pwd" type="password" name="password" maxlength="12" />
+                    </div>
+                    <!-- 비밀번호 확인 입력창 -->
+                    <div class="input-area">
+                        <label for="check-pwd">비밀번호 확인</label>
+                        <input id="checkPwd" type="password" name="check-pwd" maxlength="12" />
+                    </div>
+                    <!-- 닉네임 입력창 -->
+                    <div class="input-area">
+                        <label for="nickName">닉네임</label>
+                        <input id="nickName" type="text" name="nickName" />
+                    </div>
+                    <!-- 이메일 입력창 -->
+                    <div class="input-area" id="email-area">
+                        <label for="email">이메일</label>
+                        <input id="email" type="text" name="email" />
+                        <p id="error-message">사용할 수 없는 이메일입니다.</p>
+                        <button type="button" id="send-code-btn">이메일 인증</button>
+                        <div id="code-input-area">
+                            <input id="code-input" placeholder="인증 코드를 입력해주세요">
+                            <button type="button" id="match-code-btn">확인</button>
+                        </div>
+                    </div>
+                    <!-- 가입 버튼 -->
+                    <input id="join-button" type="submit" value="가입하기" onclick="return checkJoin()">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/join.js"></script>
+</html>

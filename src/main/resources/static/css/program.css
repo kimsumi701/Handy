@@ -1,0 +1,248 @@
+/* 헤더 */
+#wrap {
+    height: 100%;
+    min-height: 100%;
+}
+#header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin-bottom: 100px;
+    border-bottom: 1px solid #252525;
+    background-color: #f6f8fa;
+}
+/* 로그아웃 */
+.user-tool {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+.user-tool a {
+    color: #aaa
+}
+
+/* 로고 */
+.logo-box {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 80px;
+}
+.header a {
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    background-image: url(/img/logo_s.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 프로필 정보 */
+.user-profile {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* 프로필 이미지 */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #aaa;
+    overflow: hidden;
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 유저 닉네임 */
+.profile-nickname {
+    margin-top: 10px;
+}
+
+/* 메인 */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 50%;
+}
+
+/* 프로그램 박스 */
+.program-box {
+    width: 40%;
+}
+
+.list-group-item {
+
+}
+
+
+/* 프로그래 리스트 없을 경우 */
+.blank-list {
+    height: 200px;
+    color: #aaa;
+    line-height: 170px;
+    text-align: center;
+}
+
+/* input 영역 */
+.input-edit-box {
+    margin-top: 40px;
+}
+
+/* 프로그램 입력 */
+#add-program-input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    text-indent: 10px;
+}
+#add-program-input:focus {
+    outline: none;
+}
+
+/* 프로그램 추가 버튼 */
+#add-program-btn {
+    width: 65px;
+    height: 38px;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    background-color: #f6f8fa;
+}
+
+/* 프로그램 목록 선택 */
+.show-info-box {
+    height: 100px;
+    margin-top: 35px;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.input-box {
+    border-bottom: 1px dashed #aaa;
+    height: 70px;
+}
+#info-box, #delete-box{
+    display: none;
+}
+
+/* 리스트 클릭 프로그램명 */
+#program-name {
+    margin: 0 0 16px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 프로그램 수정 버튼 */
+#edit-btn, #save-btn, #delete-btn {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    background-color: #f6f8fa;
+}
+
+/* 프로그램 수정 상태 */
+#edit-box {
+    display: none;
+}
+#edit-name {
+    width: 100%;
+    height: 35px;
+    margin: 0px 0 8px 0;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    text-indent: 10px;
+}
+#edit-name:focus {
+    outline: none;
+}
+
+/* 삭제 버튼 */
+#delete-box {
+    position: relative;
+}
+#delete-box {
+    height: 50px;
+}
+#delete-box p {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    color: red;
+    font-size: 13px;
+}
+
+/* footer */
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+
+    border-top: 1px solid #252525;
+}
+#footer div {
+    text-align: center;
+}
+
+/* 모바일 사이즈 */
+@media (max-width: 768px) {
+    #header {
+        margin-bottom: 30px;
+    }
+
+    /* 컨테이너 */
+    .container {
+        flex-direction: column;
+    }
+
+    /* 프로그램 목록 */
+    .program-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 프로그램 관련 박스 */
+    .input-edit-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* input */
+    .input-box {
+        height: 60px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    #add-program-input {
+        width: 80%;
+    }
+
+    /* 프로그램 수정 박스 */
+    .show-info-box {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    /* 수정 input */
+    #edit-name {
+        width: 100%;
+    }
+
+
+
+}

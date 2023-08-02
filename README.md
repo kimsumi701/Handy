@@ -2,7 +2,7 @@
 개인 포트폴리오 작업물입니다.
 <br>
 <h3>관련 문서</h3> 
-<b>설계를 위한 문서로 실제 작업물과 다른 부분이 있을 수 있습니다.</b>
+<b>설계 단계에서 작성된 문서로 실제 작업물과 다른 부분이 있을 수 있습니다.</b>
 <br>
 <ul>
   <li><a href="https://docs.google.com/document/d/1lObNwOQJFIoAvun0VeDSV3AFBCkhJn3wPHfWtibfWv0" target="_blank">요구사항 정의서</a></li>

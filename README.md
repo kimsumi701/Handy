@@ -23,6 +23,7 @@
 	<img src="https://img.shields.io/badge/MSSQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white" />
 	
 </div>
+<br>
 <h3>관련 문서</h3> 
 <p><i>설계 단계에서 작성된 문서로 실제 작업물과 다른 부분이 있을 수 있습니다.</i></p>
 <ul>

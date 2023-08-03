@@ -2,6 +2,7 @@
 <p>Handy는 다양한 단축키를 쉽게 관리하기 위한 목적으로 만들어진 개인 포트폴리오 작업물입니다.</p>
 <br>
 <div>
+	<span>Tool</span>
 	<img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=VisualStudioCode&logoColor=white" />
 	<img src="https://img.shields.io/badge/intelliJ IDEA-000000?style=flat&logo=intellijidea&logoColor=white" />
 	<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />

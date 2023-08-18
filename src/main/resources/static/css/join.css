@@ -117,7 +117,7 @@
     display: none;
     position: absolute;
     top: 35px;
-    left: 0;
+    left: 150px;
     text-indent: 5px;
 }
 
@@ -153,6 +153,11 @@
     #send-code-btn {
         right: -82px;
     }
+
+    /* 이메일 확인란 */
+    #code-input-area {
+        left: 113px;
+    }
 }
 
 /* 모바일 사이즈 */
@@ -173,5 +178,15 @@
         margin: 0;
         width: 40%;
         margin-right: 15px;
+    }
+
+    /* 이메일 확인란 */
+    #code-input-area {
+        width: 100%;
+        left: 34%;
+    }
+
+    #code-input-area input {
+        width: 66%;
     }
 }
